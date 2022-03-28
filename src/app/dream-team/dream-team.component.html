@@ -1,0 +1,309 @@
+<body>
+
+  <header id="tg-header" class="tg-header tg-haslayout">
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="tg-topbar tg-haslayout">
+            <nav id="tg-topaddnav" class="tg-topaddnav">
+
+              <div id="tg-addnavigationm-mobile" class="tg-addnavigationm-mobile collapse navbar-collapse">
+
+                <div class="tg-colhalf pull-right">
+                  <nav class="tg-addnav">
+                    <ul>
+                      <li>
+                        <a>
+                          <i routerLink="/home">Home</i>
+                        </a>
+                      </li>
+                      <li>
+                        <a>
+                          <i routerLink="/profile">Profile</i>
+                        </a>
+                      </li>
+                      <li><a data-toggle="modal" data-target="#tg-register">Logout</a></li>
+                    </ul>
+                  </nav>
+                </div>
+
+
+              </div>
+            </nav>
+          </div>
+          <nav id="tg-nav" class="tg-nav brand-center">
+            <div class="navbar-header">
+              <strong class="tg-logo">
+                <a href="index-2.html"><img src="../../assets/images/logo.png" alt="image description"></a>
+              </strong>
+            </div>
+
+            <div id="tg-navigation" class="tg-navigation">
+              <div class="tg-colhalf">
+
+              </div>
+              <div class="tg-colhalf">
+
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="tg-main-section tg-haslayout tg-bgdark">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <div class="tg-statistics">
+
+            <div class="tg-statistic tg-earnedawards">
+              <h3>.</h3><br>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tg-main-section tg-haslayout">
+    <div class="container">
+      <div class="tg-section-name">
+        <h2>Dream lineUP</h2>
+      </div>
+      <div class="col-sm-11 col-xs-11 pull-right">
+        <div class="row">
+          <div class="tg-latestresult">
+            <div class="row">
+              <div class="col-md-5 col-sm-12 col-xs-12">
+                <div class="tg-contentbox">
+                  <div class="tg-section-heading">
+                    <h2>Select Team</h2>
+                  </div>
+                  <div class="tg-description">
+                    <p>Select your dream best 11
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-7 col-sm-12 col-xs-12">
+
+                <div class="example-card">
+
+                  <p>
+                    <a class="btn tg-btn btn-lg btn-block" type="button" data-toggle="collapse"
+                      data-target="#multiCollapseExample1" aria-expanded="false"
+                      aria-controls="multiCollapseExample1">Select GoalKeeper</a>
+                  </p>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body" >
+
+                          <mat-form-field  appearance="fill">
+                            <mat-label>GoalKeeper</mat-label>
+                            <mat-select [(ngModel)]=" team.keeper" required>
+                              <mat-option>--</mat-option>
+                              <mat-option  name="fieldName" ngDefaultControl  *ngFor="let Gk of players.keeper" [value]="Gk">
+                                {{Gk.name}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p>
+                    <a class="btn tg-btn btn-lg btn-block" type="button" data-toggle="collapse"
+                      data-target="#multiCollapseExample2" aria-expanded="false"
+                      aria-controls="multiCollapseExample2">Select Defenders</a>
+                  </p>
+
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>LB</mat-label>
+                            <mat-select [(ngModel)]=" team.defenders.lb"  required>
+                              <mat-option>--</mat-option>
+                              <mat-option  *ngFor="let defender of players.defenders" [value]="defender">
+                                {{defender.name}}
+                              </mat-option>
+                            </mat-select>
+
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>RB</mat-label>
+                            <mat-select [(ngModel)]=" team.defenders.rb" required>
+                              <mat-option>--</mat-option>
+                              <mat-option  *ngFor="let defender of players.defenders" [value]="defender">
+                                {{defender.name}}
+                              </mat-option>
+                            </mat-select>
+
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>CB</mat-label>
+                            <mat-select [(ngModel)]=" team.defenders.cb1" required>
+                              <mat-option>--</mat-option>
+                              <mat-option   *ngFor="let defender of players.defenders" [value]="defender">
+                                {{defender.name}}
+                              </mat-option>
+                            </mat-select>
+
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>CB</mat-label>
+                            <mat-select [(ngModel)]=" team.defenders.cb2" required>
+                              <mat-option>--</mat-option>
+                              <mat-option  *ngFor="let defender of players.defenders" [value]="defender">
+                                {{defender.name}}
+                              </mat-option>
+                            </mat-select>
+
+                          </mat-form-field>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p>
+                    <a class="btn tg-btn btn-lg btn-block" type="button" data-toggle="collapse"
+                      data-target="#multiCollapseExample3" aria-expanded="false"
+                      aria-controls="multiCollapseExample3">Select Midfielder</a>
+                  </p>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="collapse multi-collapse" id="multiCollapseExample3">
+                        <div class="card card-body">
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>LM</mat-label>
+                            <mat-select [(ngModel)]=" team.midfielder.lm" required>
+                              <mat-option>--</mat-option>
+                              <mat-option  *ngFor="let midfielder of players.midfielder" [value]="midfielder">
+                                {{midfielder.name}}
+                              </mat-option>
+                            </mat-select>
+
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>RM</mat-label>
+                            <mat-select [(ngModel)]="team.midfielder.rm" required>
+                              <mat-option>--</mat-option>
+                              <mat-option  *ngFor="let midfielder of players.midfielder" [value]="midfielder ">
+                                {{midfielder.name}}
+                              </mat-option>
+                            </mat-select>
+
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>DM</mat-label>
+                            <mat-select [(ngModel)]=" team.midfielder.Dm1"   required>
+                              <mat-option>--</mat-option>
+                              <mat-option  *ngFor="let midfielder of players.midfielder" [value]="midfielder ">
+                                {{midfielder .name}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>DM</mat-label>
+                            <mat-select [(ngModel)]=" team.midfielder.Dm2"   required>
+                              <mat-option>--</mat-option>
+                              <mat-option *ngFor="let midfielder of players.midfielder" [value]="midfielder ">
+                                {{midfielder .name}}
+                              </mat-option>
+                            </mat-select>
+
+                          </mat-form-field>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p>
+                    <a class="btn tg-btn btn-lg btn-block" type="button" data-toggle="collapse"
+                      data-target="#multiCollapseExample4" aria-expanded="false"
+                      aria-controls="multiCollapseExample4">Select Forwards</a>
+                  </p>
+
+                   <div class="row">
+                    <div class="col">
+                      <div class="collapse multi-collapse" id="multiCollapseExample4">
+
+                        <div class="card card-body">
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>ST</mat-label>
+                            <mat-select [(ngModel)]=" team.forwards.st1"  required>
+                              <mat-option>--</mat-option>
+                              <mat-option  *ngFor="let forward of players.forwards" [value]="forward">
+                                {{forward.name}}
+                              </mat-option>
+                            </mat-select>
+
+                          </mat-form-field>
+
+                          <mat-form-field appearance="fill">
+                            <mat-label>ST</mat-label>
+                            <mat-select [(ngModel)]=" team.forwards.st2" required>
+                              <mat-option>--</mat-option>
+                              <mat-option  *ngFor="let forward of players.forwards" [value]="forward">
+                                {{forward.name}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <p>
+                    <input (change)="postImage($event)" id="imgupload" class="btn tg-btn btn-lg btn-block" type="file">
+                  </p>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="card card-body">
+                        <p>
+                          <button (click)="createDreamTeam()" class="btn tg-btn btn-lg"
+                            >Save</button>
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+</body>

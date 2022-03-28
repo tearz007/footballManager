@@ -1,0 +1,61 @@
+<div class="content">
+
+  <div class="container">
+
+    <img class="icon" src="../../assets/images/logo.png" width="100px" height="100px">
+
+    <form [formGroup]="loginForm" *ngIf="tap ==='login'" class="example-form">
+
+      <label>
+        <input formControlName="email" type="Email" required placeholder="email">
+      </label>
+
+      <label>
+        <input formControlName="password" type="password" required placeholder="password">
+      </label>
+
+      <br>
+      <!-- <button (click)="login()" class="btn" mat-raised-button color="primary">Sign in</button> -->
+      <button (click)="login()" class="btn tg-btn btn-lg"> Sign in </button>
+
+      <label class="signupBtn">
+        Don't have an account?
+        <a (click)="toggle()">Signup</a>
+      </label>
+
+    </form>
+
+    <form [formGroup]="registerForm" *ngIf="tap ==='register'" class="example-form">
+
+      <label>
+        <input formControlName="email" type="Email" required placeholder="email">
+      </label>
+      <label>
+        <input formControlName="name" type="text" required placeholder="name">
+      </label>
+      <label>
+        <input formControlName="surname" type="text" required placeholder="surname">
+      </label>
+      <label>
+        <input formControlName="soccerTeam" type="text" required placeholder="Soccer Team">
+      </label>
+      <label>
+        <input formControlName="password" type="password" required placeholder="password">
+      </label>
+
+      <br>
+      <!-- <button (click)="signup()" class="btn" mat-raised-button color="primary">Sign up</button> -->
+
+      <button (click)="signup()" class="btn tg-btn btn-lg"> Sign up </button>
+
+      <label class="signupBtn">
+        Have an account?
+        <a (click)="toggle()">Login</a>
+      </label>
+
+    </form>
+
+  </div>
+
+
+</div>
