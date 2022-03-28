@@ -15,6 +15,7 @@ import { MatRippleModule } from '@angular/material/core';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { ConfirmCodeComponent } from './confirm-code/confirm-code.component';
 
@@ -43,6 +44,7 @@ import { ProfileComponent } from './profile/profile.component';
     MatStepperModule,
     MatCardModule,
     MatSelectModule,
+    MatProgressSpinnerModule,
 
     // appolo
     ApolloModule,

@@ -50,32 +50,5 @@ export class AwsS3ServiceService {
       // setTimeout(initializeS3, 1000);
     }
 
-    // const region = 'USEast(N.Virginia)us-east-1';
-    // const bucketName = 'footballbucket101';
-    // const IdentityPoolId = 'us-east-1_PFkmjcivc';
-
-    // const file = fileInput.target.files[0];
-
-    // const SESConfig = {
-    //   apiVersion: '2016-04-18',
-    //   accessKeyId: 'AKIARLUPSCJA4JD2GR56',
-    //   accessSecretKey: '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',
-    //   region: region,
-    // };
-    // config.update(SESConfig);
-
-    // const s3 = new S3({
-    //   apiVersion: '2006-03-01',
-    //   params: { Bucket: bucketName },
-    // });
-
-    // s3.upload(
-    //   { Key: file.name, Bucket: bucketName, Body: file, ACL: 'public-read' },
-    //   (err: any) => {
-    //     if (err) {
-    //       console.log(err.message);
-    //     }
-    //   }
-    // );
   }
 }

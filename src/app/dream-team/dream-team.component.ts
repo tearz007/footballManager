@@ -45,8 +45,6 @@ export class DreamTeamComponent implements OnInit {
 
   getTeams() {
     this.teamsService.getPlayers().subscribe((snap: any) => {
-      console.log(snap.data[0].position);
-      console.log(snap.data);
       this.players = {
         keeper: [],
         defenders: [],
